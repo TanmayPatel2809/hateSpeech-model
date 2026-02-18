@@ -26,8 +26,8 @@ guard-%:
 	@#$(or ${$*}, $(error $* is not set))
 
 ## Call entrypoint
-entrypoint: up
-	$(DOCKER_COMPOSE_EXEC) python ./hateSpeech/entrypoint.py
+local-run-tasks: up
+	$(DOCKER_COMPOSE_EXEC) python ./hateSpeech/run_tasks.py
 
 ## Starts jupyter lab
 notebook: up

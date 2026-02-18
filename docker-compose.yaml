@@ -4,9 +4,9 @@ services:
   app:
     user: "${USER_ID:-1000}"
     hostname: "${HOST_NAME:-tanmay}"
-    image: hatespeech-template
+    image: hatespeech-model
     platform: linux/amd64
-    container_name: hatespeech-template-container
+    container_name: hatespeech-model-container
     build:
       context: .
       dockerfile: ./docker/Dockerfile
